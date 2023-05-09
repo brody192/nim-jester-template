@@ -10,7 +10,7 @@ router myrouter:
 
 proc main() =
   # use the environment PORT variable or fall back to 3000
-  let port = parseInt(getEnv("PORT", "3000")).Port
+  let port = getEnv("PORT", "3000").parseInt().Port
   let settings = newSettings(port = port)
   var jester = initJester(myrouter, settings = settings)
   # jester listens on all interfaces by default
