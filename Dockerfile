@@ -6,6 +6,6 @@ COPY . .
 
 RUN nimble refresh
 
-RUN nimble build
+RUN nimble build -d:release
 
 CMD ./main
